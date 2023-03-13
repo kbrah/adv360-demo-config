@@ -50,18 +50,6 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     chosen {
         zmk,matrix_transform = &urobs_transform;
     };
-    behaviors {
-         hml: left_homerow_modsrt  {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_LEFT";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            hold-trigger-key-positions = <RIGHT_KEYS>;
-            hold-trigger-on-release;
-            bindings = <&kp>, <&kp>;
-        };
-    }
 
     keymap {
         compatible = "zmk,keymap";
