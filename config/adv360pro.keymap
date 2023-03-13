@@ -47,6 +47,8 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     hold-trigger-on-release;             // requires PR #1423
 )
 
+#define QUICK_TAP_MS 175
+
 ZMK_BEHAVIOR(num_dance, tap_dance,
     tapping-term-ms = <200>;
     bindings = <&num_word>, <&sl KEYPAD>;  // might want to reverse if rarely using more than 1 digit
