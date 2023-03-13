@@ -1,4 +1,3 @@
-
 /*                KEY POSITIONS
 
   ╭─────────────────────╮ ╭─────────────────────╮
@@ -19,7 +18,7 @@
 ZMK_COMBO(esc,   &kp ESC,       LT3 LT2,     DEF NAV NUM, COMBO_TERM_FAST)
 ZMK_COMBO(tab,   &kp TAB,       LT2 LT1,     DEF NAV NUM, COMBO_TERM_FAST)
 
-ZMK_COMBO(repeat,&key_repeat,   LM3 LM2,     DEF NAV NUM, COMBO_TERM_FAST)
+/* ZMK_COMBO(repeat, &key_repeat,   LM3 LM2,     DEF NAV NUM, COMBO_TERM_FAST) */
 ZMK_COMBO(ret,   &kp RETURN,    LM2 LM1,     DEF NAV NUM, COMBO_TERM_FAST)
 
 ZMK_COMBO(cut,   &kp LC(X),     LB3 LB1,     DEF NAV NUM, COMBO_TERM_SLOW)
