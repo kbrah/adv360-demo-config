@@ -49,7 +49,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 
 ZMK_BEHAVIOR(num_dance, tap_dance,
     tapping-term-ms = <200>;
-    bindings = <&num_word>, <&sl NUM>;  // might want to reverse if rarely using more than 1 digit
+    bindings = <&num_word>, <&sl KEYPAD>;  // might want to reverse if rarely using more than 1 digit
 )
 ZMK_BEHAVIOR(num_layer_word, hold_tap,
     flavor = "balanced";
