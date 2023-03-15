@@ -49,11 +49,11 @@ ZMK_COMBO(amps,  &kp AMPS,      RT3 RM3,     0 1, COMBO_TERM_SLOW)
 
 ZMK_COMBO(grave, &kp GRAVE,     LM3 LB3,     0 1, COMBO_TERM_SLOW)
 ZMK_COMBO(bslh,  &kp BSLH,      LM2 LB2,     0 1, COMBO_TERM_SLOW)
-ZMK_COMBO(equal, &kp EQUAL,     LM1 LB1,     0 1, COMBO_TERM_SLOW)
+ZMK_COMBO(equal, &kp EQUAL,     RM0 RM1,     0 1, COMBO_TERM_SLOW)
 ZMK_COMBO(tilde, &kp TILDE,     LM0 LB0,     0 1, COMBO_TERM_SLOW)
 
 ZMK_COMBO(under, &kp UNDER,     RM0 RB0,     0 1, COMBO_TERM_SLOW)
-ZMK_COMBO(minus, &kp MINUS,     RM1 RB1,     0 1, COMBO_TERM_SLOW)
+ZMK_COMBO(minus, &kp MINUS,     RT0 RT1,     0 1, COMBO_TERM_SLOW)
 ZMK_COMBO(fslh,  &kp FSLH,      RM2 RB2,     0 1, COMBO_TERM_SLOW)
 ZMK_COMBO(pipe,  &kp PIPE,      RM3 RB3,     0 1, COMBO_TERM_SLOW)
 

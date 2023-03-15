@@ -150,7 +150,7 @@ ZMK_COMBO(rbrk,  &kp RBKT,      RB2 RB3,     0 1, COMBO_TERM_FAST)
                 ___       ___          ___          ___          ___          ___                                       ___          ___              ___          ___          ___          ___
                 ___       ___          ___          &bl BL_INC   &bl BL_DEC                                                          &bl BL_INC       &bl BL_DEC   ___          ___          ___
                                                                               &bt BT_CLR   &bt BT_CLR       &bt BT_CLR  &bt BT_CLR
-                                                                 ___          &bl BL_TOG   ___              ___         &bl BL_TOG   ___
+                                                                 &rgb_ug RGB_TOG &bl BL_TOG   ___              ___         &bl BL_TOG   &rgb_ug RGB_TOG
                                                                                            ___              ___
             >;
         };
