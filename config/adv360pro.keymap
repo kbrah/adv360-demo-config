@@ -85,11 +85,11 @@ ZMK_BEHAVIOR(num_layer_word, hold_tap,
 
         colemak_layer {
             bindings = <
-                ___       ___       ___       ___       ___       ___       ___            ___       ___       ___       ___       ___       ___       ___
-                ___       &kp Q     &kp W     &kp F     &kp P     &kp B     ___            ___       &kp J     &kp L     &kp U     &kp Y     &kp SQT   &kp BSLH
-                ___       &kp A     &kp R     &kp S     &kp T     &kp G     ___            ___       &kp M     &kp N     &kp E     &kp I     &kp O     &kp FSLH
-                ___       &kp Z     &kp X     &kp C     &kp D     &kp V                              &kp K     &kp H     &kp COMMA &kp DOT   &kp SEMI  ___
-                ___       ___       ___       ___       ___                                                    ___       ___       ___       ___       ___
+                ___       ___           ___         ___             ___       ___       ___            ___       ___            ___      ___            ___         ___           ___
+                ___       &kp Q         &kp W       &kp F           &kp P     &kp B     ___            ___       &kp J          &kp L    &kp U          &kp Y       &kp SQT       &kp BSLH
+                ___       &hml LGUI A   &hml LALT R &hml LCTRL S    &kp T     &kp G     ___            ___       &kp M          &kp N    &hmr LCTRL E   &hmr LALT I &hmr LGUI O   &kp FSLH
+                ___       &kp Z         &kp X       &kp C           &kp D     &kp V                              &kp K          &kp H    &kp COMMA      &kp DOT     &kp SEMI      ___
+                ___       ___           ___         ___             ___                                                         ___      ___            ___         ___           ___
                                                                   ___       ___            ___       ___
                                                         ___       ___       ___            ___       ___       ___
                                                                             ___            ___
@@ -99,7 +99,7 @@ ZMK_BEHAVIOR(num_layer_word, hold_tap,
             bindings = <
                 ___       ___       ___       ___       ___       ___       ___            ___       ___       ___       ___       ___       ___       ___
                 ___       &kp SQT     &kp COMMA     &kp DOT     &kp P     &kp Y     ___            ___       &kp F     &kp G     &kp C     &kp R     &kp L   &kp BSLH
-                ___       &kp A     &kp O     &kp E     &kp U     &kp I     ___            ___       &kp D     &kp H     &kp T     &kp N     &kp S     &kp FSLH
+                ___       &hml LGUI A     &hml LALT O     &hml LCTRL E     &kp U     &kp I     ___            ___       &kp D     &kp H     &hmr LCTRL T     &hmr LALT N     &hmr LGUI S     &kp FSLH
                 ___       &kp SEMI     &kp Q     &kp J     &kp K     &kp X                              &kp B     &kp M     &kp W &kp V   &kp Z  ___
                 ___       ___       ___       ___       ___                                                    ___       ___       ___       ___       ___
                                                                   ___       ___            ___       ___
