@@ -17,6 +17,7 @@
 #define KEYPAD 4
 #define FN 5
 #define MOD 6
+#define NAV 7
 
 #include "combos.dtsi"
 /* definitions for mouse layer */
@@ -60,6 +61,14 @@ ZMK_BEHAVIOR(num_layer_word, hold_tap,
     quick-tap-ms = <QUICK_TAP_MS>;
     bindings = <&mo>, <&num_dance>;
 )
+
+ZMK_BEHAVIOR(nav_layer, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&kp ESC>, <&sl NAV>;
+)
+
 ZMK_BEHAVIOR(toggle_qwerty_hmr, macro,
     bindings = <&to QWERTY>, <&num_dance>;
 )
@@ -76,8 +85,8 @@ ZMK_BEHAVIOR(toggle_qwerty_hmr, macro,
         base_layer {
             bindings = <
                 &kp EQUAL &kp N1       &kp N2       &kp N3        &kp N4        &kp N5    &tog KEYPAD    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
-                &kp TAB   &kp Q        &kp W        &kp E         &kp R         &kp T     &tog NO_HMR    &none   &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSLH
-                &kp ESC   &hml LGUI A  &hml LALT S  &hml LCTRL D  &kp F         &kp G     &to COLEMAK    &to DVORAK &kp H    &kp J     &hmr LCTRL K     &hmr LALT L     &hmr LGUI SEMI  &kp SQT
+                &kp TAB   &kp Q        &kp W        &kp E         &kp R         &kp T     &to NO_HMR    &none   &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSLH
+                &nav_layer   &hml LGUI A  &hml LALT S  &hml LCTRL D  &kp F         &kp G     &to COLEMAK    &to DVORAK &kp H    &kp J     &hmr LCTRL K     &hmr LALT L     &hmr LGUI SEMI  &kp SQT
                 &kp LSHFT &kp Z        &kp X        &kp C         &kp V         &kp B                              &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
                 &kp LCTRL &kp GRAVE    NUM_WORD     &kp LEFT      &kp RIGHT                                                  &kp UP    &kp DOWN  &kp LBKT  &kp RBKT  &mo FN
                                                                               &kp DEL   &kp LALT         &kp LGUI  &kp RCTRL
@@ -88,11 +97,11 @@ ZMK_BEHAVIOR(toggle_qwerty_hmr, macro,
 
         base_layer_no_hmr {
             bindings = <
-                &kp EQUAL &kp N1       &kp N2       &kp N3        &kp N4        &kp N5    &tog KEYPAD    &mo MOD    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
-                &kp TAB   &kp Q        &kp W        &kp E         &kp R         &kp T     &to QWERTY     &none      &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSLH
-                &kp ESC   &kp A        &kp S        &kp D         &kp F         &kp G     &to COLEMAK    &to DVORAK &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
-                &kp LSHFT &kp Z        &kp X        &kp C         &kp V         &kp B                              &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
-                &kp LCTRL &kp GRAVE    NUM_WORD     &kp LEFT      &kp RIGHT                                                  &kp UP    &kp DOWN  &kp LBKT  &kp RBKT  &mo FN
+                &kp --- &kp N1       &kp N2       &kp N3        &kp N4        &kp N5    &tog KEYPAD    &mo MOD    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
+                &kp ---   &kp Q        &kp W        &kp E         &kp R         &kp T     &to QWERTY     &none      &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSLH
+                &kp ---   &kp A        &kp S        &kp D         &kp F         &kp G     &to COLEMAK    &to DVORAK &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
+                &kp --- &kp Z        &kp X        &kp C         &kp V         &kp B                              &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
+                &kp --- &kp GRAVE    NUM_WORD     &kp LEFT      &kp RIGHT                                                  &kp UP    &kp DOWN  &kp LBKT  &kp RBKT  &mo FN
                                                                               &kp DEL   &kp LALT         &kp LGUI  &kp RCTRL
                                                                     &kp BSPC  &kp LGUI  &kp HOME         &kp PG_UP &kp ENTER &kp SPACE
                                                                                         &kp END          &kp PG_DN
@@ -163,6 +172,18 @@ ZMK_BEHAVIOR(toggle_qwerty_hmr, macro,
             >;
         };
 
+        nav {
+            bindings = <
+                &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6    ___            ___       &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
+                ___       ___       ___       ___       ___       ___       ___            ___       ___       ___       ___       ___       ___       ___
+                ___       ___       ___       ___       ___       ___       ___            ___       LEFT       DOWN     UP        RIGHT       ___       ___
+                ___       ___       ___       ___       ___       ___                                ___       ___       ___       ___       ___       ___
+                ___       ___       ___       ___       ___                                                    ___       ___       ___       ___       ___
+                                                                  ___       ___            ___       ___
+                                                        ___       ___       ___            ___       ___       ___
+                                                                            ___            ___
+            >;
+        };
 
     };
 
