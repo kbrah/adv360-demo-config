@@ -97,14 +97,14 @@ ZMK_BEHAVIOR(toggle_qwerty_hmr, macro,
 
         base_layer_no_hmr {
             bindings = <
-                ___       ___           ___         ___             ___       ___       ___            ___       ___            ___      ___            ___         ___           ___
-                ---   &kp Q        &kp W        &kp E         &kp R         &kp T     &to QWERTY     &none      &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSLH
-                ---   &kp A        &kp S        &kp D         &kp F         &kp G     &to COLEMAK    &to DVORAK &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
-                ---   &kp Z        &kp X        &kp C         &kp V         &kp B                              &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
-                ---   &kp GRAVE    NUM_WORD     &kp LEFT      &kp RIGHT                                                  &kp UP    &kp DOWN  &kp LBKT  &kp RBKT  &mo FN
-                                                                                          --- ---         --- ---
-                                                                                      --- --- ---         --- --- ---
-                                                                                              ---         ---
+                ___   ___          ___          ___           ___           ___       ___            ___        ___       ___       ___       ___       ___       ___
+                ___   ___          ___          ___           ___           ___       &to QWERTY     ___        ___       ___       ___       ___       ___       ___
+                ___   &kp A        &kp S        &kp D         ___           ___       ___    ___        ___       ___       &kp K     &kp L     &kp SEMI  ___ 
+                ___   ___          ___          ___           ___           ___                                 ___       ___       ___       ___       ___       ___
+                ___   ___          ___          ___           ___                                                         ___       ___       ___       ___       ___
+                                                                                          ___ ___         ___ ___
+                                                                                      ___ ___ ___         ___ ___ ___
+                                                                                              ___         ___
             >;
         };
 
