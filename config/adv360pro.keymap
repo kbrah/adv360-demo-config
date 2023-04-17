@@ -112,7 +112,7 @@ ZMK_BEHAVIOR(toggle_qwerty_hmr, macro,
             bindings = <
                 ___       ___           ___         ___             ___       ___       ___            ___       ___            ___      ___            ___         ___           ___
                 ___       &kp Q         &kp W       &kp F           &kp P     &kp B     ___            ___       &kp J          &kp L    &kp U          &kp Y       &kp SQT       &kp BSLH
-                ___       &hml LGUI A   &hml LALT R &hml LCTRL S    &kp T     &kp G     ___            ___       &kp M          &kp N    &hmr LCTRL E   &hmr LALT I &hmr LGUI O   &kp FSLH
+                ___       &kp A         &kp R       &kp S           &kp T     &kp G     ___            ___       &kp M          &kp N    &kp E          &kp I       &kp O         &kp FSLH
                 ___       &kp Z         &kp X       &kp C           &kp D     &kp V                              &kp K          &kp H    &kp COMMA      &kp DOT     &kp SEMI      ___
                 ___       ___           ___         ___             ___                                                         ___      ___            ___         ___           ___
                                                                   ___       ___            ___       ___
