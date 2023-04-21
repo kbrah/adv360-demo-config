@@ -11,13 +11,12 @@
 #define ___ &trans
 
 #define QWERTY 0
-#define NO_HMR 1
-#define COLEMAK 2
-#define DVORAK 3
-#define KEYPAD 4
-#define FN 5
-#define MOD 6
-#define NAV 7
+#define COLEMAK 1
+#define DVORAK 2
+#define KEYPAD 3
+#define FN 4
+#define MOD 5
+#define NAV 6
 
 #include "combos.dtsi"
 /* definitions for mouse layer */
@@ -85,26 +84,13 @@ ZMK_BEHAVIOR(toggle_qwerty_hmr, macro,
         base_layer {
             bindings = <
                 &kp EQUAL &kp N1       &kp N2       &kp N3        &kp N4        &kp N5    &tog KEYPAD    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
-                &kp TAB   &kp Q        &kp W        &kp E         &kp R         &kp T     &to NO_HMR    &none   &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSLH
-                &nav_layer NAV ESC    &hml LGUI A  &hml LALT S  &hml LCTRL D  &kp F         &kp G     &to COLEMAK    &to DVORAK &kp H    &kp J     &hmr LCTRL K     &hmr LALT L     &hmr LGUI SEMI  &kp SQT
+                &kp TAB   &kp Q        &kp W        &kp E         &kp R         &kp T     &none    &none   &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSLH
+                &kp ESC   &kp A        &kp S        &kp D         &kp F         &kp G     &to COLEMAK    &to DVORAK &kp H    &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
                 &kp LSHFT &kp Z        &kp X        &kp C         &kp V         &kp B                              &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
                 &kp LCTRL &kp GRAVE    NUM_WORD     &kp LEFT      &kp RIGHT                                                  &kp UP    &kp DOWN  &kp LBKT  &kp RBKT  &mo FN
                                                                               &kp DEL   &kp LALT         &kp LGUI  &kp RCTRL
                                                                     &kp BSPC  &kp LGUI  &kp HOME         &kp PG_UP &kp ENTER &kp SPACE
                                                                                         &kp END          &kp PG_DN
-            >;
-        };
-
-        base_layer_no_hmr {
-            bindings = <
-                ___   ___          ___          ___           ___           ___       ___            ___        ___       ___       ___       ___       ___       ___
-                ___   ___          ___          ___           ___           ___       &to QWERTY     ___        ___       ___       ___       ___       ___       ___
-                ___   &kp A        &kp S        &kp D         ___           ___       ___    ___     ___        ___       &kp K     &kp L     &kp SEMI  ___ 
-                ___   ___          ___          ___           ___           ___                                 ___       ___       ___       ___       ___       ___
-                ___   ___          ___          ___           ___                                                         ___       ___       ___       ___       ___
-                                                                                          ___ ___         ___ ___
-                                                                                      ___ ___ ___         ___ ___ ___
-                                                                                              ___         ___
             >;
         };
 
@@ -172,18 +158,6 @@ ZMK_BEHAVIOR(toggle_qwerty_hmr, macro,
             >;
         };
 
-        nav {
-            bindings = <
-                &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6    ___            ___       &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
-                ___       ___       ___       ___       ___       ___       ___            ___       ___       ___       ___       ___       ___       ___
-                ___       ___       ___       ___       ___       ___       ___            ___       &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT     ___       ___
-                ___       ___       ___       ___       ___       ___                                ___       ___       ___       ___       ___       ___
-                ___       ___       ___       ___       ___                                                    ___       ___       ___       ___       ___
-                                                                  ___       ___            ___       ___
-                                                        ___       ___       ___            ___       ___       ___
-                                                                            ___            ___
-            >;
-        };
 
     };
 
